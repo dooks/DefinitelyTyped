@@ -6,13 +6,7 @@
 
 /// <reference lib="dom"/>
 
-interface PDFPromise<T> {
-    isResolved(): boolean;
-    isRejected(): boolean;
-    resolve(value: T): void;
-    reject(reason: string): void;
-    then<U>(onResolve: (promise: T) => U, onReject?: (reason: string) => void): PDFPromise<U>;
-}
+type PDFPromise<T> = Promise<T>;
 
 interface PDFTreeNode {
     title: string;
